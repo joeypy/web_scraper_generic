@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "8880:8880"
+    volumes:
+      - ./app:/app
+      - ./data:/app/data
+    command: python main.py
